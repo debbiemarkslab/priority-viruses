@@ -29,7 +29,7 @@ ESM-1v (ensemble) | Single sequence | Uniref90 |[Meier, J., Rao, R., Verkuil, R.
 Tranception (without retrieval) | Single sequence | Uniref100 | [Notin, P., Dias, M., Frazer, J., Marchena-Hurtado, J., Gomez, A.N., Marks, D.S., & Gal, Y. (2022). Tranception: protein fitness prediction with autoregressive transformers and inference-time retrieval. ICML.](https://proceedings.mlr.press/v162/notin22a.html) | [Tranception](https://github.com/OATML-Markslab/Tranception)
 SaProt (AF2 and PDB 650M) | Single sequence & structural tokens (Foldseek) | AF2DB or AF2DB+PDB | [Jin Su, Chenchen Han, Yuyang Zhou, Junjie Shan, Xibin Zhou, Fajie Yuan. (2024). SaProt: Protein Language Modeling with Structure-aware Vocabulary. ICLR](https://www.biorxiv.org/content/10.1101/2023.10.01.560349v5) | [SaProt](https://github.com/westlake-repl/SaProt)
 
-We also report a new hybrid model that combines alignment-based EVE and structural-aware PLM SaProt with reliability estimation (EVEREST).
+We also report a new hybrid model that combines alignment-based EVE and structural-aware PLM SaProt with reliability estimation (EVEREST), and compare to existing hybrid models.
 
 **Hybrid Models**:
 Model name | Input modalities | Training Database | Reference | Github
@@ -41,7 +41,7 @@ EVEREST | MSA and structural tokens (Foldseek) | Uniref90, Uniref100 or Uniref10
 
 
 ## Results
-The [results](https://github.com/debbiemarkslab/priority-viruses/blob/main/results/) folder contains model scores for mutation effects across all viral DMS assays for each alignment-based and protein language model as well as reported Spearman correlations between models and experiments. Confidence metrics are also reported for both alignment-based models and SaProt, and are used to create a hybrid model. Hybrid model mutation effect predictions are made for the antigens of each WHO priority virus.
+The [results](https://github.com/debbiemarkslab/priority-viruses/blob/main/results/) folder contains model scores for mutation effects across all viral DMS assays for each alignment-based and protein language model as well as reported Spearman correlations between models and experiments. Confidence metrics are also reported for both alignment-based models and SaProt, and are used to create a hybrid model EVEREST. Hybrid model mutation effect predictions are made for the antigens of each WHO priority virus.
 
 ## Reproducability
 The code for training these models and for mutation effect scoring is available through [ProteinGym](https://github.com/OATML-Markslab/ProteinGym).
