@@ -8,7 +8,7 @@ Advances in machine learning have improved our ability to predict the effects of
 ## Data
 The [viral DMS substitutions](https://github.com/debbiemarkslab/priority-viruses/tree/main/data/viral_dms_substitutions) folder contains 45 curated and standardized viral deep mutational scans (DMS), listed in [reference file](https://github.com/debbiemarkslab/priority-viruses/blob/main/data/reference_files/viral_dms_reference.csv). The [viral DMS structures](https://github.com/debbiemarkslab/priority-viruses/tree/main/data/viral_dms_structures) folder contains AlphaFold structures of all of the base sequences. The sequences and structures are used as inputs to the models below.
 
-To model the 40 priority and prototype RNA viral pathogens from the [WHO](https://cdn.who.int/media/docs/default-source/consultation-rdb/prioritization-pathogens-v6final.pdf?sfvrsn=c98effa7_7&download=true), sequence and folded structures are also collected of the antigens. 
+To model the 44 priority and prototype RNA viral pathogens from the [WHO](https://cdn.who.int/media/docs/default-source/consultation-rdb/prioritization-pathogens-v6final.pdf?sfvrsn=c98effa7_7&download=true), sequence and folded structures are also collected of the antigens. 
 
 ## Models
 Our analysis includes models from the following papers.
