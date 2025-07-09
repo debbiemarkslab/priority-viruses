@@ -52,6 +52,6 @@ Special thanks to the teams of experimentalists who developed and performed the 
 This project is available under the MIT license. 
 
 ## Reference
-Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Reliable fitness prediction for pandemic-threat viruses. _BioRxiv_. 2025.
+Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Generative models accelerate pandemic preparedness across viral families. _BioRxiv_. 2025.
 
 (* equal contribution)
