@@ -1,6 +1,6 @@
 # Mutation Effect Prediction Across Priority Viruses
 
-This is the official code repository for the paper: ["Generative models accelerate pandemic preparedness across viral families"](https://openreview.net/pdf?id=DvC6VL7TJK) from the [Marks Lab](https://www.deboramarkslab.com/).
+This is the official code repository for the paper: ["Pan-viral generative model for pandemic preparedness"](https://openreview.net/pdf?id=DvC6VL7TJK) from the [Marks Lab](https://www.deboramarkslab.com/).
 
 ## Overview
 Viruses pose a growing threat to human health with rapid evolutionary rates, high adaptability, and potential for cross-species spillover. Advances in machine learning and the growing availability of sequence data have shown promise for our ability to predict the effects of mutations at scale. Predicting viral evolution could revolutionize our ability to protect against emerging viral threats, and design better vaccines, therapeutics, and viral vectors. However, existing modeling approaches under-perform when applied to viral mutation effect prediction compared to performance on non-viral proteins. To address this, we develop EVEREST, an Evolutionary model of Variant Effect with Reliability ESTimation. EVEREST outperforms existing methods and introduces novel metrics to assess the reliability of predictions and identify when additional sequence or structural data are required. We provide the first large-scale viral mutation effect predictions of more than 400,000 variants across 40 WHO-prioritized pandemic-threat viruses. Despite limited surveillance for many of the high-risk viruses, we show that most have sufficient data to enable accurate modeling, underscoring the promise of these approaches for pandemic preparedness. 
@@ -52,6 +52,6 @@ Special thanks to the teams of experimentalists who developed and performed the 
 This project is available under the MIT license. 
 
 ## Reference
-Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Generative models accelerate pandemic preparedness across viral families. _BioRxiv_. 2025.
+Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Pan-viral generative model for pandemic preparedness. _BioRxiv_. 2025.
 
 (* equal contribution)
