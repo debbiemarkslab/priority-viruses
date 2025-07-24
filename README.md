@@ -1,4 +1,4 @@
-# Mutation Effect Prediction Across Priority Viruses
+# Mutation Effect Prediction Across Priority Viruses 
 
 This is the official code repository for the paper: ["Pan-viral generative model for pandemic preparedness"](https://openreview.net/pdf?id=DvC6VL7TJK) from the [Marks Lab](https://www.deboramarkslab.com/).
 
