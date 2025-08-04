@@ -1,9 +1,9 @@
 # Mutation Effect Prediction Across Priority Viruses 
 
-This is the official code repository for the paper: ["Pan-viral generative model for pandemic preparedness"](https://openreview.net/pdf?id=DvC6VL7TJK) from the [Marks Lab](https://www.deboramarkslab.com/).
+This is the official code repository for the paper: ["Variant effect prediction with reliability estimation across priority viruses"]([https://openreview.net/pdf?id=DvC6VL7TJK](https://github.com/debbiemarkslab/priority-viruses/tree/main/EVEREST_paper.pdf)) from the [Marks Lab](https://www.deboramarkslab.com/).
 
 ## Overview
-Viruses pose a growing threat to human health with rapid evolutionary rates, high adaptability, and potential for cross-species spillover. Advances in machine learning and the growing availability of sequence data have shown promise for our ability to predict the effects of mutations at scale. Predicting viral evolution could revolutionize our ability to protect against emerging viral threats, and design better vaccines, therapeutics, and viral vectors. However, existing modeling approaches under-perform when applied to viral mutation effect prediction compared to performance on non-viral proteins. To address this, we develop EVEREST, an Evolutionary model of Variant Effect with Reliability ESTimation. EVEREST outperforms existing methods and introduces novel metrics to assess the reliability of predictions and identify when additional sequence or structural data are required. We provide the first large-scale viral mutation effect predictions of more than 400,000 variants across 40 WHO-prioritized pandemic-threat viruses. Despite limited surveillance for many of the high-risk viruses, we show that most have sufficient data to enable accurate modeling, underscoring the promise of these approaches for pandemic preparedness. 
+Viruses pose a significant threat to global health due to their rapid evolution, adaptability, and increasing potential for cross-species transmission. While advances in machine learning and the growing availability of sequence and structure data offer promise for large-scale mutation effect prediction, viruses present unique biological and informational constraints that may challenge these models. To quantify this, we introduce EVEREST—a framework for Evolutionary Variant Effect prediction with Reliability ESTimation—which assesses model performance on mutation effect prediction using a curated benchmark of 45 viral deep mutational scanning datasets (over 340 thousand variants) and develop reliability metrics to quantify model uncertainty in the absence of experimental data. This large-scale evaluation revealed wide differences in prediction accuracy across models and viral families. Contrary to findings on non-viral proteins, we find that protein language models trained on diverse sequence corpora under-perform on viral proteins compared to alignment-based models trained on a much smaller set of homologous sequences. We apply this framework across 40 WHO-prioritized pandemic-threat viruses (over 400 thousand variants across 16 viral families), and discover that state-of-the-art models fail to reliably predict mutations in over half of these viruses. Our findings uncover key factors leading to under-performance, offer actionable recommendations for improving viral mutation effect prediction, and provide an objective framework for analyzing dual-use biosecurity risk.
 
 ## Data
 The [viral DMS substitutions](https://github.com/debbiemarkslab/priority-viruses/tree/main/data/viral_dms_substitutions) folder contains 45 curated and standardized viral deep mutational scans (DMS), listed in [reference file](https://github.com/debbiemarkslab/priority-viruses/blob/main/data/reference_files/viral_dms_reference.csv). The [viral DMS structures](https://github.com/debbiemarkslab/priority-viruses/tree/main/data/viral_dms_structures) folder contains AlphaFold structures of all of the base sequences. The sequences and structures are used as inputs to the models below.
@@ -27,7 +27,7 @@ ESM-1v (ensemble) | Single sequence | Uniref90 |[Meier, J., Rao, R., Verkuil, R.
 Tranception (without retrieval) | Single sequence | Uniref100 | [Notin, P., Dias, M., Frazer, J., Marchena-Hurtado, J., Gomez, A.N., Marks, D.S., & Gal, Y. (2022). Tranception: protein fitness prediction with autoregressive transformers and inference-time retrieval. ICML.](https://proceedings.mlr.press/v162/notin22a.html) | [Tranception](https://github.com/OATML-Markslab/Tranception)
 SaProt (AF2 and PDB 650M) | Single sequence & structural tokens (Foldseek) | AF2DB or AF2DB+PDB | [Jin Su, Chenchen Han, Yuyang Zhou, Junjie Shan, Xibin Zhou, Fajie Yuan. (2024). SaProt: Protein Language Modeling with Structure-aware Vocabulary. ICLR](https://www.biorxiv.org/content/10.1101/2023.10.01.560349v5) | [SaProt](https://github.com/westlake-repl/SaProt)
 
-We also report a new hybrid model that combines alignment-based EVE and structural-aware PLM SaProt with reliability estimation (EVEREST), and compare to existing hybrid models.
+We also report a new hybrid model that combines alignment-based EVE and structural-aware PLM SaProt (SaProt-EVE) and produces reliability estimates, and compare to existing hybrid models.
 
 **Hybrid Models**:
 Model name | Input modalities | Training Database | Reference | Github
@@ -35,7 +35,7 @@ Model name | Input modalities | Training Database | Reference | Github
 VESPA | Single sequence | BFD+Uniref50 | [Marquet, C., Heinzinger, M., Olenyi, T., Dallago, C., Bernhofer, M., Erckert, K., & Rost, B. (2021). Embeddings from protein language models predict conservation and variant effects. Human Genetics, 141, 1629 - 1647.](https://link.springer.com/article/10.1007/s00439-021-02411-y) | [VESPA](https://github.com/Rostlab/VESPA)
 Tranception (with MSA retrieval) | MSA | Uniref100 | [Notin, P., Dias, M., Frazer, J., Marchena-Hurtado, J., Gomez, A.N., Marks, D.S., & Gal, Y. (2022). Tranception: protein fitness prediction with autoregressive transformers and inference-time retrieval. ICML.](https://proceedings.mlr.press/v162/notin22a.html) | [Tranception](https://github.com/OATML-Markslab/Tranception)
 TranceptEVE | MSA | Uniref100 | [Notin, P., Van Niekerk, L., Kollasch, A., Ritter, D., Gal, Y. & Marks, D.S. &  (2022). TranceptEVE: Combining Family-specific and Family-agnostic Models of Protein Sequences for Improved Fitness Prediction. NeurIPS, LMRL workshop.](https://www.biorxiv.org/content/10.1101/2022.12.07.519495v1?rss=1) | [TranceptEVE](https://github.com/OATML-Markslab/ProteinGym/blob/main/notebooks/TranceptEVE_example.ipynb)
-EVEREST | MSA and structural tokens (Foldseek) | Uniref90, Uniref100 or Uniref100+BFD+MGnify and AF2DB+PDB | This work | This work
+SaProt-EVE | MSA and structural tokens (Foldseek) | Uniref90, Uniref100 or Uniref100+BFD+MGnify and AF2DB+PDB | This work | This work
 
 
 ## Results
@@ -52,6 +52,6 @@ Special thanks to the teams of experimentalists who developed and performed the 
 This project is available under the MIT license. 
 
 ## Reference
-Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Pan-viral generative model for pandemic preparedness. _BioRxiv_. 2025.
+Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Variant effect prediction with reliability estimation across priority viruses. 2025.
 
 (* equal contribution)
