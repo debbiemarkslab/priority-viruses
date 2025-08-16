@@ -1,6 +1,6 @@
 # Mutation Effect Prediction Across Priority Viruses 
 
-This is the official code repository for: ["Variant effect prediction with reliability estimation across priority viruses"](https://github.com/debbiemarkslab/priority-viruses/tree/main/EVEREST_paper.pdf) from the [Marks Lab](https://www.deboramarkslab.com/).
+This is the official code repository for: ["Variant effect prediction with reliability estimation across priority viruses"](https://www.biorxiv.org/content/10.1101/2025.08.04.668549v1) from the [Marks Lab](https://www.deboramarkslab.com/).
 <p align="center">
   <img width="300" height="300" alt="EVEREST_logo" src="https://github.com/user-attachments/assets/daf85430-92ef-402a-a0a1-4c31d2fa1fe8" />
 </p>
@@ -55,6 +55,6 @@ Special thanks to the teams of experimentalists who developed and performed the 
 This project is available under the MIT license. 
 
 ## Reference
-Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Variant effect prediction with reliability estimation across priority viruses. 2025.
+Sarah Gurev*, Noor Youssef*, Navami Jain, Debora S. Marks. Variant effect prediction with reliability estimation across priority viruses. *BioRxiv*, 2025.
 
 (* equal contribution)
