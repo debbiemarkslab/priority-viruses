@@ -42,7 +42,7 @@ SaProt-EVE | MSA and structural tokens (Foldseek) | Uniref90, Uniref100 or Unire
 
 
 ## Results
-The [results](https://github.com/debbiemarkslab/priority-viruses/blob/main/results/) folder contains model scores for mutation effects across all viral DMS assays for each alignment-based and protein language model as well as reported Spearman correlations between models and experiments. Confidence metrics are also reported for both alignment-based models and SaProt, and are used to create a hybrid model EVEREST. Hybrid model mutation effect predictions are made for the antigens of each WHO priority virus.
+The [results](https://github.com/debbiemarkslab/priority-viruses/blob/main/results/) folder contains model scores for mutation effects across all viral DMS assays for each alignment-based and protein language model as well as reported Spearman correlations between models and experiments. Confidence metrics are also reported for both alignment-based models and SaProt. New hybrid model SaProt-EVE mutation effect predictions are made for the antigens of each WHO priority virus.
 
 ## Reproducability
 The code for training these models and for mutation effect scoring is available through [ProteinGym](https://github.com/OATML-Markslab/ProteinGym).
