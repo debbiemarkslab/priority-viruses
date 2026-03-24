@@ -53,6 +53,8 @@ The code for training these models and for mutation effect scoring is available 
 
 Special thanks to the teams of experimentalists who developed and performed the viral DMS assays this work is built on. If you are using these assays in your work, please cite the corresponding papers. To facilitate this, details of each paper is included in the [DMS reference file](https://github.com/debbiemarkslab/priority-viruses/blob/main/data/reference_files/viral_dms_reference.csv).
 
+We gratefully acknowledge all data contributors, i.e., the authors and their originating laboratories responsible for obtaining the specimens and their submitting laboratories for generating the genetic sequence and metadata and sharing via the GISAID Initiative, as well as LANL, on which the forecasting benchmark is based.
+
 ## License
 This project is available under the MIT license. 
 
